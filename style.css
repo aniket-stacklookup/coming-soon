@@ -1,0 +1,289 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  height: 100vh;
+}
+
+/* Background Video */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero {
+  text-align: left;
+  color: white;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+
+/* Logo and Company Name Hover Effect */
+.navbar .logo {
+  display: flex;
+  margin-left: 1%;
+  align-items: center;
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar .logo:hover {
+  transform: scale(1.2); /* Zoom effect */
+  color: orange; /* Change text color to orange */
+}
+
+.navbar .logo img {
+  width: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.navbar .logo:hover img {
+  transform: rotate(360deg); /* Rotate logo on hover */
+}
+
+/* Text Animation */
+.navbar .logo span {
+  font-size: 1.5rem; /* Adjust the font size */
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar .logo:hover span {
+  color: orange;
+  text-shadow: 0px 0px 10px rgba(255, 165, 0, 0.8), 0px 0px 20px rgba(255, 140, 0, 0.6);
+  animation: glow 1.5s infinite; /* Glow effect */
+}
+
+/* Adding Smooth Animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0px 0px 5px rgba(255, 165, 0, 0.8);
+  }
+  50% {
+    text-shadow: 0px 0px 20px rgba(255, 140, 0, 1);
+  }
+  100% {
+    text-shadow: 0px 0px 5px rgba(255, 165, 0, 0.8);
+  }
+}
+
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Use column layout for smaller screens */
+  height: 100%;
+  width: 35%; /* Maintain width for the container */
+  margin-left: 10%; /* Horizontal offset */
+  margin-top: -5%; /* Vertical offset */
+  padding: 0 2rem; /* Add padding for responsiveness */
+}
+
+/* Glass Content */
+.glass-content {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px 50px;
+  max-width: 700px;
+  width: 90%;
+}
+
+.glass-content h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.glass-content p {
+  font-size: 1rem;
+  color: #d0d4f6;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+}
+
+.learn-more {
+  background-color: #00bfff;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 191, 255, 0.4);
+}
+
+.learn-more:hover {
+  background-color: #009fd9;
+}
+
+.video {
+  background: none;
+  color: #00bfff;
+  border: 2px solid #00bfff;
+}
+
+.video:hover {
+  background-color: rgba(0, 191, 255, 0.1);
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  margin-left: 20%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.social-icons img {
+  width: 25px;
+  margin-right: 20px;
+  filter: invert(1);
+}
+
+footer p {
+  margin-right: 30%;
+}
+
+/* Logo Before Company Name */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    width: 50%;
+    margin-left: 5%; /* Adjust margin for smaller screens */
+  }
+
+  .glass-content {
+    padding: 30px 40px;
+  }
+
+  .glass-content h1 {
+    font-size: 2rem;
+  }
+
+  .glass-content p {
+    font-size: 0.9rem;
+  }
+
+  .buttons .btn {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 70%;
+    margin-left: 5%;
+  }
+
+  .glass-content {
+    padding: 20px 30px;
+  }
+
+  .glass-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .glass-content p {
+    font-size: 0.85rem;
+  }
+
+  .buttons .btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%; /* Full width on smaller devices */
+    margin-left: 0;
+    padding: 0 1rem;
+  }
+
+  .glass-content {
+    padding: 15px 20px;
+  }
+
+  .glass-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .glass-content p {
+    font-size: 0.8rem;
+  }
+
+  .buttons .btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+}
